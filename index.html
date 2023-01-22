@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Форма</title>
+    <style>
+        html {
+            background-color: rgb(13, 12, 19);
+            scroll-behavior: smooth;
+        }
+
+        .main {
+            height: 100vh;
+            padding: 10px;
+
+        }
+
+        h1 {
+            color: beige;
+        }
+
+        h2 {
+            color: rgb(31, 31, 110);
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form__name {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form__foto {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form__comment {
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            gap: 20px;
+        }
+
+        .label {
+            color: beige;
+        }
+
+        .input {
+            height: 25px;
+            border: 1.5px dashed rgb(31, 31, 110);
+            background-color: black;
+
+        }
+
+        .text {
+            height: 120px;
+            background-color: black;
+            border: 1.5px dashed rgb(31, 31, 110);
+            ;
+        }
+
+        button {
+            background-color: rgb(31, 31, 110);
+            border: none;
+            height: 30px;
+            font-size: 15px;
+            color: beige;
+        }
+
+        .btn {
+            padding: 5px;
+        }
+
+        input,
+        textarea {
+            color: beige;
+        }
+
+        .block-hidden__image>img {
+            max-width: 60%;
+
+        }
+
+        button:hover {
+            background-color: rgb(8, 8, 53)
+        }
+
+        .block-hidden {
+            display: none;
+            color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Сервис комментариев со спам-фильтром </h1>
+
+    <main class="main">
+
+        <div class="form">
+            <h2 class="head">Оставьте Ваш комментарий</h2>
+            <div class="form__name">
+                <label class="username__label label" for="usernameInput">Введите ваше ФИО:</label>
+                <input class="username__input input" type="text" id="usernameInput" name="name">
+            </div>
+            <div class="form__foto">
+                <label class="userpic__label label" for="userpicInput">Введите ссылку вашего аватара:</label>
+                <input class="userpic__input input" type="url" id="userpicInput">
+            </div>
+            <div class="form__comment">
+                <label class="text__label label" for="textInput">Оставьте комментарий</label>
+                <textarea class="text__input text" name="text" id="textInput"></textarea>
+            </div>
+            <div class="btn">
+                <button onclick='showComment()' class="button">Отправить</button>
+            </div>
+        </div>
+
+        <div class="chat">
+            <h2 class="head">Чат </h2>
+            <div class="block-hidden">
+                <div class="block-hidden__username"></div>
+                <div class="block-hidden__image">
+                    <img class="image" src="" alt="foto">
+                </div>
+                <div class="block-hidden__comment"></div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="index.js">
+
+    </script>
+</body>
+
+</html>
