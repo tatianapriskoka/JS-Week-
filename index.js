@@ -7,9 +7,6 @@ let username = document.querySelector('.block-hidden__username');
 let comment = document.querySelector('.block-hidden__comment');
 let image = document.querySelector('.image');
 
-console.log(comment);
-
-
 button.addEventListener('click', showComment);
 function showComment() {
     image.src = userpicInput.value;
