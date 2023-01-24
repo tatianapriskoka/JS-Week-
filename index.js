@@ -10,13 +10,13 @@ const image = document.querySelector('.image');
 button.addEventListener('click', showComment);
 function showComment() {
     image.src = userpicInput.value;
-    let usernameWords = usernameInput.value;
-    let usernameLower = usernameWords.toLowerCase();
-    let usernameChanged = usernameLower.trim();
+    const usernameWords = usernameInput.value;
+    const usernameLower = usernameWords.toLowerCase();
+    const usernameChanged = usernameLower.trim();
     username.textContent = capitalizeWords(usernameChanged);
     chatHidden.style.display = 'block';
-    let commentWords = textInput.value;
-    let spam = commentWords.replace(/viagra/ig, "***");
+    const commentWords = textInput.value;
+    const spam = commentWords.replace(/viagra/ig, "***");
     comment.textContent = spam;
 
     button.addEventListener('click', function (event) {
