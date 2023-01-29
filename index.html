@@ -85,8 +85,8 @@
             color: beige;
         }
 
-        .block-hidden__image>img {
-            max-width: 60%;
+        img {
+            max-width: 40%;
         }
 
         button:hover {
@@ -94,8 +94,54 @@
         }
 
         .block-hidden {
-            display: none;
             color: beige;
+            display: grid;
+            grid-template-rows: 0.1fr 0.5fr 0.3fr 0.5fr;
+            gap: 10px;
+        }
+
+        .form__question {
+            color: beige;
+            display: grid;
+            grid-template-columns: 1fr 0.5fr 0.5fr;
+            padding-right: 200px;
+        }
+
+        .option {
+            height: 20px;
+            width: 20px;
+            border: 1.5px dashed rgb(31, 31, 110);
+            background-color: black;
+        }
+
+        .option input {
+            color: black;
+            height: 20px;
+            width: 20px;
+        }
+
+        .message {
+            height: 200px;
+            width: 200px;
+            border-bottom: 1.5px dashed rgb(31, 31, 110);
+            width: 100%;
+        }
+
+
+        .message-time {
+            order: 1;
+        }
+
+        .message-name {
+            order: 2;
+        }
+
+        .message-foto {
+            order: 3;
+        }
+
+        .message-text {
+            order: 4;
         }
     </style>
 </head>
@@ -107,6 +153,17 @@
 
         <div class="form">
             <h2 class="head">Оставьте Ваш комментарий</h2>
+            <div class="form__question">
+                <div>Показывать Ваше имя?</div>
+                <div class="option">
+                    <input type='checkbox' id="option1">
+                    <label for="option1">Yes</label>
+                </div>
+                <div class="option">
+                    <input type='checkbox' id="option2">
+                    <label for="option2">No</label>
+                </div>
+            </div>
             <div class="form__name">
                 <label class="form__label label" for="usernameInput">Введите ваше ФИО:</label>
                 <input class="form__input input" type="text" id="usernameInput" name="name">
@@ -120,20 +177,14 @@
                 <textarea class="text__input textinput" name="text" id="textInput"></textarea>
             </div>
             <div class="btn">
-                <button onclick='showComment()' class="button">Отправить</button>
+                <button class="button">Отправить</button>
             </div>
         </div>
 
         <div class="chat">
             <h2 class="head">Чат </h2>
             <div class="block-hidden">
-                <div class="block-hidden__username"></div>
-                <div class="block-hidden__image">
-                    <img class="image" src="" alt="foto">
-                </div>
-                <div class="block-hidden__comment"></div>
             </div>
-
         </div>
 
     </main>
