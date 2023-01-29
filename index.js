@@ -28,7 +28,7 @@ function makeTime() {
 const makeComment = () => {
     /*let message = document.createElement('div');
     message.className = 'message';
-    chatHidden.append(message); */
+    chatHidden.append(message);*/
 
     let messageTime = document.createElement('div');
     messageTime.className = 'message-time';
